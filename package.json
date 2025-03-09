@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prebuild:dev": "npm run prebuild",
+    "build:dev": "vite build --mode development",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -16,9 +21,11 @@
     "@mui/lab": "^6.0.0-beta.18",
     "@mui/material": "^6.1.10",
     "@mui/x-date-pickers": "^7.23.1",
+    "clean": "^4.0.2",
     "react": "^18.3.1",
     "react-datepicker": "^7.5.0",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "type-check": "^0.4.0"
   },
   "devDependencies": {
     "@emotion/styled": "^11.13.5",
@@ -33,8 +40,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "formik": "^2.4.6",
+    "gh-pages": "^6.3.0",
     "globals": "^15.12.0",
     "react-router-dom": "^7.0.1",
+    "rimraf": "^6.0.1",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
     "uuid": "^11.0.3",
