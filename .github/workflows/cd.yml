@@ -11,6 +11,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Use SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
+
+      - name: Git config
+        run: |
+          git config --global user.email "cd-user@my-app.com"
+          git config --global user.name "cd-user"
+
       - name: Install
         run: npm ci
 
@@ -18,4 +29,4 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        run: npm run deploy
+        run: npm run deploy -- -r git@github.com:OskWeb/modulo7_cloud_laboratorio_ejercicio2.git
