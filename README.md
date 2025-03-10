@@ -37,4 +37,7 @@ Una vez añadida la eliminamos de nuestro proyecto.
  
  ![imagen](https://github.com/user-attachments/assets/3894579a-01e7-4bf4-97cf-e5b1e0aa7ba2)
 
+Url despliegue:
+https://oskweb.github.io/modulo7_cloud_laboratorio_ejercicio2/#/orders
+
 
