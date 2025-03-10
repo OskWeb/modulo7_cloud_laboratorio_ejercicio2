@@ -16,7 +16,7 @@ Todo ello aprovechando los comandos que hemos declarado en nuestro package.json,
 
 ![imagen](https://github.com/user-attachments/assets/3f42b1e0-4c31-49b8-b1eb-16123fdae309)
 
-3. En nnuestro proyecto creamos la clave ssh con el siguiente comando: 
+3. En nuestro proyecto creamos la clave ssh con el siguiente comando: 
   ssh-keygen -m PEM -t rsa -C "cd-user@my-app.com"
 
 4. Añadimos la clave publica a nuestro repo de github, para ello nos vamos a la siguiente ventana:
